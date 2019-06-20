@@ -2,7 +2,7 @@ import sagemaker.amazon.common as smac
 from sagemaker import get_execution_role
 from sagemaker.predictor import json_deserializer
 from sagemaker.tuner import HyperparameterTuner, IntegerParameter, ContinuousParameter, CategoricalParameter
-
+import sagemaker
 import boto3, csv, io, json, re, os, sys, pprint, time, random
 from time import gmtime, strftime
 from botocore.client import Config
