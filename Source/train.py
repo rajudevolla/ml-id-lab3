@@ -1,4 +1,3 @@
-import sagemaker
 import sagemaker.amazon.common as smac
 from sagemaker import get_execution_role
 from sagemaker.predictor import json_deserializer
@@ -133,7 +132,7 @@ fm = sagemaker.estimator.Estimator(containers[boto3.Session().region_name],
                                    base_job_name=job_name,
                                    sagemaker_session=sagemaker.Session())
 
-no_hyper_parameter_tuning = True
+no_hyper_parameter_tuning = False
 
 if (no_hyper_parameter_tuning):
     #
