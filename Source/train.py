@@ -127,7 +127,7 @@ job_name = stack_name + "-" + commit_id
 fm = sagemaker.estimator.Estimator(containers[boto3.Session().region_name],
                                    role,
                                    train_instance_count=1,
-                                   train_instance_type='ml.m5.xlarge',
+                                   train_instance_type='ml.t2.medium',
                                    output_path=output_prefix,
                                    base_job_name=job_name,
                                    sagemaker_session=sagemaker.Session())
